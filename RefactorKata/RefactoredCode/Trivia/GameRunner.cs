@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Trivia
+﻿namespace Trivia
 {
+    using System;
+
     public class GameRunner
     {
         private static bool _notAWinner;
@@ -22,7 +22,7 @@ namespace Trivia
 
                 if (rand.Next(9) == 7)
                 {
-                    _notAWinner = aGame.WrongAnswer();
+                    aGame.WrongAnswer();
                 }
                 else
                 {
