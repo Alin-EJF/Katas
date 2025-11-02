@@ -8,25 +8,25 @@
 
         public static void Main(string[] args)
         {
-            var aGame = new Game();
+            var game = new Game();
 
-            aGame.Add("Chet");
-            aGame.Add("Pat");
-            aGame.Add("Sue");
+            game.Add("Chet");
+            game.Add("Pat");
+            game.Add("Sue");
 
             var rand = new Random();
 
             do
             {
-                aGame.Roll(rand.Next(5) + 1);
+                game.Roll(rand.Next(5) + 1);
 
                 if (rand.Next(9) == 7)
                 {
-                    aGame.WrongAnswer();
+                    game.WrongAnswer();
                 }
                 else
                 {
-                    _notAWinner = aGame.WasCorrectlyAnswered();
+                    _notAWinner = game.WasCorrectlyAnswered();
                 }
             } while (_notAWinner);
         }
